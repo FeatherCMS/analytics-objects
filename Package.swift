@@ -4,15 +4,13 @@ import PackageDescription
 let package = Package(
     name: "analytics-objects",
     platforms: [
-       .macOS(.v10_15)
+       .macOS(.v12)
     ],
     products: [
         .library(name: "AnalyticsObjects", targets: ["AnalyticsObjects"]),
     ],
     dependencies: [
-//		.package(path: "../feather-objects"),
-        .package(url: "https://github.com/Rando-Coderissian/feather-objects", .branch("test-refactor-modules")),
-	//        .package(url: "https://github.com/feathercms/feather-objects", .branch("main")),
+	       .package(url: "https://github.com/feathercms/feather-objects", .branch("main")),
     ],
     targets: [
         .target(name: "AnalyticsObjects", dependencies: [
